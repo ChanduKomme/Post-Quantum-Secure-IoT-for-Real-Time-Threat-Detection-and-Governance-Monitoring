@@ -1,6 +1,0 @@
-profile,delivered,structured_delivery_percent,completed_cycles,cycle_delivery_percent,rtt_median_ms,rtt_p95_ms,capture_inferred_forward_loss_percent
-network_baseline,1000,100.0,1000,100.00,130.0,548.00,0.00
-200ms_delay,1000,100.0,1000,100.00,337.0,748.00,NA
-10pct_random_loss,1000,100.0,1000,100.00,129.5,6535.35,9.55
-20pct_targeted_loss,991,99.1,1004,98.71,132.0,6912.00,19.95
-50pct_targeted_loss,739,73.9,1126,65.63,546.0,13300.40,50.54
