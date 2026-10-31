@@ -477,7 +477,7 @@ python3 splunk_discovery_server.py --hec-port 8088 --proactive
 ### Start Receiver Monitor
 
 ```bash
-cd PQC_project
+# Run from the repository root
 pyenv activate bl_venv
 python3 sender/tools/monitor/monitor.py -d /dev/ttyUSB1 -b 2000000
 ```
@@ -487,7 +487,7 @@ Reset the Receiver board.
 ### Start Sender Monitor
 
 ```bash
-cd PQC_project
+# Run from the repository root
 pyenv activate bl_venv
 python3 sender/tools/monitor/monitor.py -d /dev/ttyUSB0 -b 2000000
 ```
@@ -501,7 +501,7 @@ Reset the Sender board.
 Single-port mode:
 
 ```bash
-cd PQC_project
+# Run from the repository root
 pyenv activate bl_venv
 bash tools/run_security_command_center_single_port.sh
 ```
