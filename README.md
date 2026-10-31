@@ -303,7 +303,7 @@ The governance module maps technical telemetry to risk evidence. It converts liv
 Run the governance report manually:
 
 ```bash
-cd ~/sdk/bl602_iot_sdk/PQC_final
+# Run from the repository root
 pyenv activate bl_venv
 
 python3 integrations/splunk_hackerone_jira/governance/governance_test_harness.py \
@@ -379,11 +379,10 @@ The project includes a defensive attack validation suite in `pqc_attacks/`. Thes
 
 ## Environment Configuration
 
-Create a local `.env` file from the template.
+The scripts expect `.env` in the repository root. This checkout does not include the referenced `.env.example`, so create the local file and copy the safe template below into it. Keep `.env` out of Git and replace every `CHANGE_ME` value before connecting to Splunk.
 
 ```bash
-
-cp .env.example .env
+touch .env
 nano .env
 ```
 
@@ -420,7 +419,7 @@ PQC_CORRECT_FP=CHANGE_ME_64_HEX_CHARS
 ### Build Firmware
 
 ```bash
-cd PQC_project
+# Run from the repository root
 pyenv activate bl_venv
 
 export BL60X_SDK_PATH=~/sdk/bl602_iot_sdk
@@ -469,7 +468,8 @@ http://localhost:8000
 ### Start Splunk Discovery Server
 
 ```bash
-cd ~PQC_project/integrations/splunk_hackerone_jira/splunk
+# Run from the repository root
+cd integrations/splunk_hackerone_jira/splunk
 pyenv activate bl_venv
 python3 splunk_discovery_server.py --hec-port 8088 --proactive
 ```
@@ -515,16 +515,16 @@ http://localhost:8090
 Development mode:
 
 ```bash
-# Backend
-cd ~/PQC_project/dashboard/backend
+# Backend (from repository root)
+cd dashboard/backend
 pyenv activate bl_venv
 pip install -r requirements.txt
 python3 app.py
 ```
 
 ```bash
-# Frontend
-cd ~/PQC_project/dashboard/frontend
+# Frontend (from repository root)
+cd dashboard/frontend
 npm install
 npm run dev
 ```
